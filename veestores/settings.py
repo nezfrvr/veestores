@@ -59,9 +59,9 @@ WSGI_APPLICATION = 'veestores.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv("DB_NAME", "veestores_db"),
-        'USER': os.getenv("DB_USER", "postgres"),
-        'PASSWORD': os.getenv("DB_PASSWORD", "14868"),
+        'NAME': os.getenv("DB_NAME", "veestores"),
+        'USER': os.getenv("DB_USER", "veestores_user"),
+        'PASSWORD': os.getenv("DB_PASSWORD", "2X2SKsBFyEpFNEDtGHaLYVMxdogltEMu"),
         'HOST': os.getenv("DB_HOST", "dpg-d5v1jaffte5s73cd8vdg-a"),
         'PORT': os.getenv("DB_PORT", "5432"),
     }
