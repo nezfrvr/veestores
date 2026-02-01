@@ -62,7 +62,7 @@ DATABASES = {
         'NAME': os.getenv("DB_NAME", "veestores_db"),
         'USER': os.getenv("DB_USER", "postgres"),
         'PASSWORD': os.getenv("DB_PASSWORD", "14868"),
-        'HOST': os.getenv("DB_HOST", "postgresql://veestores_user:2X2SKsBFyEpFNEDtGHaLYVMxdogltEMu@dpg-d5v1jaffte5s73cd8vdg-a/veestores"),  # Replace with your actual Render DB host
+        'HOST': os.getenv("DB_HOST", "dpg-d5v1jaffte5s73cd8vdg-a"),  # Only the hostname
         'PORT': "5432",
     }
 }
