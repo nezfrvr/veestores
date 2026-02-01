@@ -7,7 +7,11 @@ SECRET_KEY = 'django-insecure-x2^$!q!7x5zu_peu-&@2=h3rz%h3sge!*-8u0$*+9s@a+0u_$g
 
 DEBUG = True
 
-ALLOWED_HOSTS = ["*", ".onrender.com"]
+ALLOWED_HOSTS = [
+    "*", 
+    ".onrender.com", 
+    "your-app.onrender.com"  # Replace with your actual Render domain
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -58,7 +62,7 @@ DATABASES = {
         'NAME': os.getenv("DB_NAME", "veestores_db"),
         'USER': os.getenv("DB_USER", "postgres"),
         'PASSWORD': os.getenv("DB_PASSWORD", "14868"),
-        'HOST': os.getenv("DB_HOST", "localhost"),
+        'HOST': os.getenv("DB_HOST", "postgresql://veestores_user:2X2SKsBFyEpFNEDtGHaLYVMxdogltEMu@dpg-d5v1jaffte5s73cd8vdg-a/veestores"),  # Replace with your actual Render DB host
         'PORT': "5432",
     }
 }
