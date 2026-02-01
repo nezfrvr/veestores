@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="mb-4">Order History</h2>
+{% if orders %}
+<table class="table table-bordered align-middle">
+    <thead class="table-light">
+        <tr>
+            <th>Date</th>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for order in orders %}
+        <tr>
+            <td>{{ order.created_at|date:"Y-m-d H:i" }}</td>
+            <td>{{ order.product.name }}</td>
+            <td>{{ order.quantity }}</td>
+            <td>KES {{ order.product.price|floatformat:2|add:"0"|floatformat:2|add:"0"|add:order.quantity|floatformat:2 }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>You have no orders yet.</p>
+{% endif %}
+{% endblock %}

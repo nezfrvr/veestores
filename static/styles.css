@@ -1,0 +1,150 @@
+
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #0a2342 0%, #1e3c72 60%, #f5e9da 100%);
+    min-height: 100vh;
+    color: #f5e9da;
+}
+
+.navbar, .footer {
+    background: linear-gradient(90deg, #0a2342 60%, #1e3c72 100%);
+    color: #f5e9da;
+    border: none;
+}
+
+.hero {
+    background: linear-gradient(135deg, #0a2342 0%, #1e3c72 60%, #f5e9da 100%);
+    color: #ffe4c4;
+    padding: 4rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 24px rgba(10,35,66,0.15);
+    margin-bottom: 2rem;
+}
+
+.carousel .card {
+    background: rgba(10,35,66,0.95);
+    color: #f5e9da;
+    border: none;
+    box-shadow: 0 2px 12px rgba(30,60,114,0.15);
+    transition: transform 0.2s;
+}
+.carousel .card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 6px 24px rgba(30,60,114,0.25);
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #ffe4c4;
+    border-radius: 50%;
+}
+.carousel-indicators [data-bs-target] {
+    background-color: #ffe4c4;
+}
+
+.footer {
+    background: linear-gradient(90deg, #0a2342 60%, #1e3c72 100%);
+    color: #f5e9da;
+    border-top: 2px solid #ffe4c4;
+    box-shadow: 0 -2px 12px rgba(10,35,66,0.10);
+}
+.footer-link {
+    color: #ffe4c4;
+    text-decoration: none;
+    margin-right: 12px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.footer-link:hover {
+    color: #f5e9da;
+    text-decoration: underline;
+}
+.footer-icon {
+    color: #ffe4c4;
+    font-size: 1.3rem;
+    margin-right: 10px;
+    transition: color 0.2s, transform 0.2s;
+}
+.footer-icon:hover {
+    color: #f5e9da;
+    transform: scale(1.2);
+}
+
+.navbar, .footer {
+    background: linear-gradient(90deg, #0a2342 60%, #1e3c72 100%);
+    color: #f5e9da;
+}
+
+.hero {
+    background: linear-gradient(135deg, #0a2342 0%, #1e3c72 60%, #f5e9da 100%);
+    color: #ffe4c4;
+    padding: 4rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 24px rgba(10,35,66,0.15);
+    margin-bottom: 2rem;
+}
+
+.carousel .card {
+    background: rgba(10,35,66,0.95);
+    color: #f5e9da;
+    border: none;
+    box-shadow: 0 2px 12px rgba(30,60,114,0.15);
+    transition: transform 0.2s;
+}
+.carousel .card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 6px 24px rgba(30,60,114,0.25);
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #ffe4c4;
+    border-radius: 50%;
+}
+.carousel-indicators [data-bs-target] {
+    background-color: #ffe4c4;
+}
+
+.navbar, .footer {
+    background: linear-gradient(90deg, #0a2342 60%, #1e3c72 100%);
+    color: #f5e9da;
+}
+
+.card {
+    background: rgba(10,35,66,0.95);
+    color: #f5e9da;
+    border: none;
+    box-shadow: 0 2px 12px rgba(30,60,114,0.15);
+    transition: transform 0.2s;
+}
+.card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 6px 24px rgba(30,60,114,0.25);
+}
+.card-title {
+    color: #ffe4c4;
+}
+.btn-primary, .btn-success {
+    background: linear-gradient(90deg, #1e3c72 60%, #f5e9da 100%);
+    color: #0a2342;
+    border: none;
+}
+.btn-primary:hover, .btn-success:hover {
+    background: linear-gradient(90deg, #f5e9da 0%, #1e3c72 100%);
+    color: #0a2342;
+}
+.form-label {
+    color: #ffe4c4;
+}
+.footer {
+    background: linear-gradient(90deg, #0a2342 60%, #1e3c72 100%);
+    color: #f5e9da;
+    border-top: 2px solid #ffe4c4;
+}
+.footer a {
+    color: #ffe4c4;
+    text-decoration: none;
+    margin: 0 8px;
+    font-weight: 500;
+}
+.footer a:hover {
+    color: #f5e9da;
+    text-decoration: underline;
+}

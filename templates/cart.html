@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="mb-4">Your Cart</h2>
+{% if cart_items %}
+<table class="table table-bordered align-middle">
+    <thead class="table-light">
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in cart_items %}
+        <tr>
+            <td>{{ item.product.name }}</td>
+            <td>{{ item.quantity }}</td>
+            <td>KES {{ item.subtotal }}</td>
+            <td>
+                <form method="post" action="/cart/remove/{{ item.product.id }}/">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger btn-sm">Remove</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<div class="d-flex justify-content-between align-items-center">
+    <h4>Total: KES {{ total }}</h4>
+    <a href="/checkout/" class="btn btn-success">Proceed to Checkout</a>
+</div>
+{% else %}
+<p>Your cart is empty.</p>
+{% endif %}
+{% endblock %}

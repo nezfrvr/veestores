@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="hero text-center">
+    <h1 class="display-3 fw-bold mb-3">Welcome to VeeStores</h1>
+    <p class="lead mb-4">Your one-stop shop for the best products. Enjoy seamless shopping, fast checkout, and order tracking!</p>
+    <a href="/cart/" class="btn btn-primary btn-lg me-2">View Cart</a>
+    <a href="/orders/" class="btn btn-outline-primary btn-lg">Order History</a>
+</div>
+
+<h2 class="mb-4">Featured Products</h2>
+<div id="productCarousel" class="carousel slide mb-4" data-bs-ride="carousel" data-bs-interval="3000">
+    <div class="carousel-inner">
+        {% for group in product_groups %}
+            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                <div class="row row-cols-1 row-cols-md-5 g-4">
+                    {% for product in group %}
+                        <div class="col">
+                            <div class="card h-100">
+                                {% if product.image %}
+                                    <img src="{{ product.image }}" class="card-img-top" alt="{{ product.name }}" style="height:180px;object-fit:cover;">
+                                {% else %}
+                                    <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Product image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Product image</title><rect width="100%" height="100%" fill="#868e96"/></svg>
+                                {% endif %}
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ product.name }}</h5>
+                                    <p class="card-text">{{ product.description|truncatewords:20 }}</p>
+                                </div>
+                                <div class="card-footer d-flex justify-content-between align-items-center">
+                                    <span class="fw-bold">KES {{ product.price }}</span>
+                                    <form method="post" action="/cart/add/{{ product.id }}/">
+                                        {% csrf_token %}
+                                        <button type="submit" class="btn btn-success">Buy</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+{% endblock %}
