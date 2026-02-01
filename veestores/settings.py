@@ -62,8 +62,8 @@ DATABASES = {
         'NAME': os.getenv("DB_NAME", "veestores_db"),
         'USER': os.getenv("DB_USER", "postgres"),
         'PASSWORD': os.getenv("DB_PASSWORD", "14868"),
-        'HOST': os.getenv("DB_HOST", "dpg-d5v1jaffte5s73cd8vdg-a"),  # Only the hostname
-        'PORT': "5432",
+        'HOST': os.getenv("DB_HOST", "dpg-d5v1jaffte5s73cd8vdg-a"),
+        'PORT': os.getenv("DB_PORT", "5432"),
     }
 }
 
